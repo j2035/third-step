@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <numeric> // accumulate関数を使用するために追加
+#include <numeric>
 #include <cmath>
 
 // 関数宣言
@@ -65,9 +65,9 @@ double calculate_std_dev(const std::vector<int>& scores, double mean) {
 // 偏差値の計算
 void calculate_z_scores(const std::vector<int>& scores, double mean, double std_dev, std::vector<double>& z_scores) {
     z_scores.resize(scores.size());
-    std::transform(scores.begin(), scores.end(), z_scores.begin(), [mean, std_dev](int score) {
-        return (score - mean) / std_dev;
-        });
+    for (size_t i = 0; i < scores.size(); ++i) {
+        z_scores[i] = 50.0 + 10.0 * (scores[i] - mean) / std_dev; // 修正された偏差値の計算式
+    }
 }
 
 // 結果の表示
