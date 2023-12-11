@@ -85,34 +85,35 @@ int main() {
     printf("理科の標準偏差: %.2f\n", sci_stdev);
     printf("理科の合計点: %d\n", sci_sum);
     printf("\n");
-
-    printf("英語の平均点: %.2f\n", eng_mean);
-    printf("英語の標準偏差: %.2f\n", eng_stdev);
-    printf("英語の合計点: %d\n", eng_sum);
-    printf("\n");
-
-    printf("理科の偏差値:\n");
-    for (int i = 0; i < sci_size; i++) {
-        printf("学生%d: %.2f\n", i + 1, sci_deviation_scores[i]);
-    }
-    printf("\n");
-
-    printf("英語の偏差値:\n");
-    for (int i = 0; i < eng_size; i++) {
-        printf("学生%d: %.2f\n", i + 1, eng_deviation_scores[i]);
-    }
-    printf("\n");
-
     printf("理科の点数の高い順:\n");
     for (int i = 0; i < sci_size; i++) {
         printf("%d ", sci_score[i]);
     }
     printf("\n");
+    printf("\n");
+    printf("理科の偏差値:\n");
+    for (int i = 0; i < sci_size; i++) {
+        printf("学生%d: %.2f\n", i + 1, sci_deviation_scores[i]);
+    }
+    printf("\n");
+    printf("\n");
 
+    printf("英語の平均点: %.2f\n", eng_mean);
+    printf("英語の標準偏差: %.2f\n", eng_stdev);
+    printf("英語の合計点: %d\n", eng_sum);
+    printf("\n");
     printf("英語の点数の高い順:\n");
     for (int i = 0; i < eng_size; i++) {
         printf("%d ", eng_score[i]);
     }
+    printf("\n");
+    printf("\n");
+    printf("英語の偏差値:\n");
+    for (int i = 0; i < eng_size; i++) {
+        printf("学生%d: %.2f\n", i + 1, eng_deviation_scores[i]);
+    }
+
+
     printf("\n");
 
     return 0;
